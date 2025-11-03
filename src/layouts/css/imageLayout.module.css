@@ -1,0 +1,14 @@
+.container {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+  border-bottom: 2px solid #cecece;
+  color: #1a3069;
+}

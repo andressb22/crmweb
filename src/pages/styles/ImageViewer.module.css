@@ -1,0 +1,47 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+}
+.contInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px 60px;
+}
+.contInfo > div {
+  display: flex;
+  flex-direction: column;
+}
+.contImages {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 60px 50px 60px;
+  gap: 30px;
+  margin-top: 40px;
+}
+.contImages > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contMenu {
+  display: grid;
+  grid-template-columns: 0.15fr 1fr;
+}
+
+.itemlist {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.link {
+  color: #000;
+  text-decoration: none;
+}
+.menu {
+  border-right: 2px solid #cecece;
+  height: 100%;
+  width: 100%;
+  padding-top: 20px;
+}
