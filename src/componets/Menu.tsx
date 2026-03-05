@@ -36,8 +36,9 @@ const Menu = () => {
       try {
         const data = await fetch(`${URLAPI}getMultimediaProperty/${inm_id}`);
         if (!data.ok) throw new Error("error");
-
+        console.log('data',data)
         const res = await data.json();
+        console.log('res',res)
         setMenu(res);
       } catch (error) {
         console.log(error);
@@ -51,7 +52,7 @@ const Menu = () => {
     <div className={styles.menu}>
       <ul style={{ listStyleType: "none", paddingLeft: "10px" }}>
         <CollapsibleItem label="Inmueble">
-          <ul style={{ listStyleType: "none", paddingLeft: "20px" }}>
+          <ul style={{ listStyleType: "none", paddingLeft: "10px" }}>
             <li className={styles.itemlist}>
               <Link
                 className={styles.link}
@@ -65,7 +66,7 @@ const Menu = () => {
                 key={zone.ami_id}
                 label={`${zone.amb.amb_name} (${zone.ami_id.substring(0, 6)})`}
               >
-                <ul style={{ listStyleType: "none", paddingLeft: "20px" }}>
+                <ul style={{ listStyleType: "none", paddingLeft: "10px" }}>
                   <li className={styles.itemlist}>
                     <Link
                       className={styles.link}

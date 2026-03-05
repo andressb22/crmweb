@@ -12,3 +12,10 @@
   border-bottom: 2px solid #cecece;
   color: #1a3069;
 }
+
+@media (max-width: 600px) {
+  .header {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}

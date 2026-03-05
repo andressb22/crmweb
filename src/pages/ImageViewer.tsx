@@ -17,7 +17,7 @@ const ImageViewer = () => {
     const getimages = async () => {
       try {
         const data = await fetch(
-          `${URLAPI}getMultimediaSeleceted/${id_reference}`
+          `${URLAPI}getMultimediaSeleceted/${id_reference}`,
         );
         if (!data.ok) throw new Error("error");
 
@@ -36,13 +36,13 @@ const ImageViewer = () => {
     <div className={styles.container}>
       <div>
         <div className={styles.contImages}>
-          {images.map((media) => {
+          {images.map((media, index) => {
             return getMediaType(media.mimeType) === "image" ? (
-              <div style={{ width: "100%" }}>
+              <div key={index} style={{ width: "100%" }}>
                 <img style={{ width: "100%" }} src={media.url} />
               </div>
             ) : (
-              <div style={{ width: "100%" }}>
+              <div key={index} style={{ width: "100%" }}>
                 <video style={{ width: "100%" }} src={media.url} />
               </div>
             );
